@@ -1,0 +1,18 @@
+[project]
+name = "fastapi-steammind"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "docx2txt>=0.9",
+    "faiss-cpu>=1.13.2",
+    "fastapi>=0.132.0",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=4.2.1",
+    "langchain-groq>=1.1.2",
+    "langgraph>=1.0.9",
+    "notebook>=7.5.3",
+    "python-dotenv>=1.2.1",
+    "uvicorn>=0.41.0",
+]

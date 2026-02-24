@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+docx2txt
+langchain-community
+langchain-google-genai
+langchain-groq
+langchain-mongodb
+langgraph
+pymongo
+python-dotenv
+faiss-cpu
+notebook
