@@ -22,7 +22,7 @@ def generate(state: State) -> State:
             "chat_history" : history,
         }
     )
-    print("\n\nResponse : ",response.content)
+    # print("\n\nResponse : ",response.content)
     return {
         "response": response.content,
         "messages": [

@@ -45,7 +45,7 @@ def eval_retrieval(state: State) -> State:
     
     refined_context = "\n".join([doc.page_content for doc in good])
     print(len(good),"Good Documents")
-    print("\n",refined_context)
+    # print("\n",refined_context)
     return {
         "good_docs" : good,
         "refined_context" : refined_context

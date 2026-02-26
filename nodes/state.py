@@ -5,7 +5,7 @@ from langchain_core.messages import BaseMessage
 
 class State(TypedDict):
     query: str
-    documents: List[Document]
+    # documents: List[Document]
     response: str
     refined_context: str
     good_docs:  List[Document]

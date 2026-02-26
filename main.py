@@ -2,11 +2,13 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from crag import generateResponse
 import uvicorn
+import uuid
 app = FastAPI()
 
 
 class QueryRequest(BaseModel):
     query: str = Field(..., max_length=200)
+    session_id: str
 
 @app.get("/")
 def root():
@@ -15,12 +17,14 @@ def root():
 @app.post("/get_response")
 async def get_response(request: QueryRequest):
     try:
-        user_input = request.query.lower()
-        bot_response = generateResponse(user_input)
+        user_input = request.query
+        print("User Input: ", user_input)
+        bot_response = generateResponse(user_input, request.session_id)
         
         return {"response": bot_response}
         
     except Exception as e:
+        print("Error: ", e)
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
 
